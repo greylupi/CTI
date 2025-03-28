@@ -1,0 +1,10 @@
+#!/usr/bin/env python3
+
+from requests_tor import RequestTor
+
+requests = RequestsTor(tor_ports=(9050,), tor_cport=9051)
+
+url = "enter .onion site"
+r = requests.get(url)
+
+print(r.text)
